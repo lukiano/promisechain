@@ -15,7 +15,6 @@ No locks are actually used, but a concatenation of Futures.
 ## Usage
  
 <code>
-
     private A someCode() { ... }
     
     private CompletableFuture<A> someAsyncCode() {
