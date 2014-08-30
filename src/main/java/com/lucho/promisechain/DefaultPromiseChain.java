@@ -71,9 +71,6 @@ import java.util.function.Supplier;
       this.type = type;
       map.ifPresent( m -> this.future.thenRun(() -> m.remove(key, this)) );
     }
-
-
   }
-
 }
 

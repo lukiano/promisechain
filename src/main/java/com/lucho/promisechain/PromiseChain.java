@@ -9,7 +9,6 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public abstract class PromiseChain<K> {
-
   public enum Type { SHARED, EXCLUSIVE }
 
   public static <K> PromiseChain<K> create() {
@@ -24,5 +23,4 @@ public abstract class PromiseChain<K> {
                                                       @Nonnull final Function<A, CompletionStage<B>> f) {
     return a -> enqueueOn(key, type, () -> f.apply(a));
   }
-
 }
